@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Develop/style.css">
+    <title>Your Meals Your Way</title>
+</head>
+<body>
+    <header>
+        <h1>Your Meals Your Way</h1>
+        <h2>Find your favorite meal and cater it to your nutritional goals and needs</h2>
+    </header>
+
+    <!-- directly under header have a featured meal of the week followed by nav buttons that sync with recipe api to link to various dietary types, breakfast, lunch, dinner, desserts, etc. thinking it'd be cool to have pictures associated with each button and the text of the button overlays the picture? directly under all those buttons, have a kids corner with more kid friendly meal images.  -->
+    <div>
+        <div id="featured">Featured Meal of the Week</div>
+        <nav>
+            <input type="text" placeholder="Search...">
+                <button class="nav-btn" id="high-pro">High Protein</button> <!-- upon each button click, use modal to gather users email address where recipes will be sent too-->
+                <button class="nav-btn" id="low-car">Low Carb</button>
+                <button class="nav-btn" id="glut-free">Gluten-Free</button>
+                <button class="nav-btn" id="pale">Paleo</button>
+                <button class="nav-btn" id="veg">Vegan</button>
+                <button class="nav-btn" id="dairy">Dairy-Free</button>
+                <button class="nav-btn" id="break">Breakfast</button>
+                <button class="nav-btn" id="lun">Lunch</button>
+                <button class="nav-btn" id="din">Dinner</button>
+                <button class="nav-btn" id="snk">Snacks</button>
+                <button class="nav-btn" id="dess">Desserts</button>
+        </nav>
+    </div>
+    <!-- under the above nav features, potentially details all the capabilities of the app? ex. nutritional break down, step by step how tos, meals in under 20 minutes, etc. -->
+<div class="kids" id="kids-corner">
+    <h2>Kids Corner</h2>
+    <div id="kids-featured">The Meals They Love Made Healthy</div>
+</div>
+
+<div>
+    <ul>
+    <li class="break-down">
+        <h3>Nutritional Breakdowns</h3>
+        <img src="" alt=""> <!-- image of recipe api-->
+    </li>
+    <li class="steps">
+        <h3>Step-by-Step Instructions</h3>
+        <img src="" alt=""> <!-- image or slider of youtube and pinterest-->
+    </li>
+    <!-- do we potentially want to look at using a macronutrient calculator api as well?-->
+    <li class="macro">
+        <h3>Macro Calculator</h3>
+        <img src="" alt="">
+    </li>
+    </ul>
+
+</div>
+
+</body>
+<script src="./Develop/script.js"></script>
+</html>
+
+
+<!-- curious if there a way we can integrate a weekly meal builder... calling it something like Food Prep Made Easy - pick 5 meals for the week - breakfast, lunch, dinner, snack and dessert-->
