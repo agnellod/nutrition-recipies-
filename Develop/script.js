@@ -62,3 +62,34 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });
+
+// Filter from API for search 
+fetch('https://www.getvodka.com/api?q+vodka')
+  // get categories - vodka, vodka
+  const example = [
+  {
+    drink1: 'vodka', 
+    drink2: 'vodka'
+  }
+]
+//  Make an API call 
+  // get categories - vodka, rum 
+
+  // populate your select options
+  // <body> 
+      // <selection id="choices">
+      
+      //</selection>
+     // </body>
+    // Targe the select element in html
+      const selection = document.querySelector('#choices');
+
+  for (let i = 0; i < example.length; i++){
+    // create an '<option>' html element 
+    const option = document.createElement('option')
+    // set the html elements text content to vodka
+    option.textContent = example.drink1;
+    // append option to the select element
+    selection.append(option);
+  }
+// 
