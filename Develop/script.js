@@ -8,7 +8,7 @@ class Search {
       console.log(this.form)
     }
   }
-  // Listener for the DOM Content load (this makes the HTML load first before this avtivates)
+  // Listener for the DOM Content load (this makes the HTML load first before this activates)
   document.addEventListener("DOMContentLoaded", () => {
     // Query for the `search-form`
     const form = document.querySelector("#search-form")
