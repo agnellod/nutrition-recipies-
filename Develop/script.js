@@ -46,15 +46,13 @@ class Search {
 //  });
 
 const axios = require("axios");
-
+var apiKey = '356844f53ca5f3e2604e67318c228565'
+var id = 'eceea0f0'
 const options = {
   method: 'GET',
-  url: 'https://edamam-recipe-search.p.rapidapi.com/search',
+  url: `https://api.edamam.com/api/recipes/v2?type=public&app_id=${id}&app_key=${apiKey}
   params: {q: 'chicken'},
-  headers: {
-    'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-    'X-RapidAPI-Host': 'edamam-recipe-search.p.rapidapi.com'
-  }
+  
 };
 
 axios.request(options).then(function (response) {
