@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // making a class for the search function to find recipes potential starter code
 class Search {
     constructor(form) {
@@ -35,16 +36,15 @@ class Search {
     }
   } 
   //  Maybe a good api to use
+=======
+var apiKey = '356844f53ca5f3e2604e67318c228565';
+var id = 'eceea0f0';
+>>>>>>> 9610efb115ed57054c2c6ab9d09047be39ef356a
 
-// I am not sure if I did this framework correct 
-// axios.get('https://edamam-recipe-search.p.rapidapi.com/search')
-  // .then((respone) => {
-    // code for response
- // })
- // .catch((error) => {
-    // code for error
-//  });
+var url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=${id}&app_key=${apiKey}`;
+const options = {method: 'GET'};
 
+<<<<<<< HEAD
 const axios = require("axios");
 var apiKey = '356844f53ca5f3e2604e67318c228565'
 var id = 'eceea0f0'
@@ -91,3 +91,9 @@ fetch('https://www.getvodka.com/api?q+vodka')
     selection.append(option);
   }
 // 
+=======
+fetch(url, options)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+>>>>>>> 9610efb115ed57054c2c6ab9d09047be39ef356a
