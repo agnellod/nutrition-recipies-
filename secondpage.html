@@ -7,15 +7,37 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Hello World
-      </h1>
-      <p class="subtitle">
-        My first website with <strong>Bulma</strong>!
-      </p>
-    </div>
-  </section>
+    <section class="section">
+      <div class="column is-half is-offset-one-quarter">
+        <div class="container">
+            <h1 class="title">
+              Your Meals Your Way
+            </h1>
+            <p class="subtitle">
+              Some recipes that you may enjoy! 
+            </p>
+        </div>
+      </div>
+      <!-- added buttons for different meal times made them different colors-->
+      <div class="columns ">
+        <div class="column is-half is-offset-one-quarter">
+          <button id="breakfast" class="button is-success">Breakfast</button>
+          <button id="lunch" class="button is-warning">Lunch</button>
+          <button id="dinner" class="button is-link">Dinner</button>
+          <button id="snacks" class="button is-danger">Snacks</button>
+        </div>
+       </div>
+       <!-- added a content div for the recipes to be displayed in
+      not sure about using ordered list would be helpful to append each result to but can always take out 
+    Could also put multiple cards into content div to be able to target each card with info from api results-->
+        <div id="recipes-content" class="content">
+          <ol type="1">
+            <li>Recipe 1</li>
+            <li>Recipe 2</li>
+            <li>Recipe 3</li>
+          </ol>
+        </div>
+       
+    </section>
   </body>
 </html>
