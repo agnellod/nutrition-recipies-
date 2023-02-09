@@ -11,7 +11,7 @@
   <section class="section">
       <div class="columns is-mobile">
           <div class="column is-half is-offset-one-quarter has-text-centered">
-                <div class="container">
+                <div class="container initial">
                         <h1 class="title">
                             Your Meals Your Way
                         </h1>
@@ -22,10 +22,11 @@
                 <!-- took the input out of the hoverable div but not sure if that will effect how the button is attached -->
                
                 <div class="buttonIn">
-                        
+                    
+                        <form>
                             <input type="text" id="input" class="input" placeholder="Search Recipes">
                             <button id="clear">clear</button>
-                        
+                        </form>
                 </div>
                 
                 <div class="dropdown is-hoverable">
@@ -47,6 +48,7 @@
                                     <button id = "kosher" class = "button is-small is-warning mt-2">Kosher <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                     <button id = "low-carb" class = "button is-small is-danger mt-2">Low-carb <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                 </p>
+                            </div>
                             </div>
                         </div>
                     </div>
