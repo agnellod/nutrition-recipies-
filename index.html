@@ -10,7 +10,7 @@
   <section class="section">
       <div class="columns is-mobile">
           <div class="column is-half is-offset-one-quarter">
-                <div class="container">
+                <div class="container initial">
                         <h1 class="title">
                             Your Meals Your Way
                         </h1>
@@ -19,7 +19,10 @@
                         </p>
                 </div>
                 <!-- took the input out of the hoverable div but not sure if that will effect how the button is attached -->
-                <input class="input" type="text" placeholder="Search Recipes">
+                <div class="container">
+                <input class = "input" type="text" placeholder="Search Recipes">
+                <div class="search-result">
+                </div>
                 <div class="dropdown is-hoverable">
                     <div class="dropdown-trigger">
                         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
@@ -41,6 +44,7 @@
                                     <button id = "kosher" class = "button is-small is-warning mt-2">Kosher <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                     <button id = "low-carb" class = "button is-small is-danger mt-2">Low-carb <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                 </p>
+                            </div>
                             </div>
                         </div>
                     </div>
