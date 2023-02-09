@@ -11,41 +11,42 @@
       <div class="columns is-mobile">
           <div class="column is-half is-offset-one-quarter">
                 <div class="container">
-                    <h1 class="title">
-                        Your Meals Your Way
-                    </h1>
+                        <h1 class="title">
+                            Your Meals Your Way
+                        </h1>
                         <p class="subtitle">
                             <strong>Your favorite meals catered your way to your own dietary needs!</strong>
                         </p>
                 </div>
-            <div class="dropdown is-hoverable">
-                <div class="dropdown-trigger">
-                    <input class="input" type="text" placeholder="Search Recipes">
-                
-                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                        <span>Dietary Restrictions</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                </div>
-                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                    <div class="dropdown-content">
-                        <div class="dropdown-item">
-                            <p>
-                                <button id = "vegan" class = "button is-small">vegan</button>
-                                <button id = "vegetarian" class = "button is-small">vegetarian</button>
-                                <button id = "gluten-free" class = "button is-small">gluten-free</button>
-                                <button id = "dairy-free" class = "button is-small">dairy-free</button>
-                                <button id = "kosher" class = "button is-small">kosher</button>
-                                <button id = "low-carb" class = "button is-small">low-carb</button>
-                            </p>
+                <!-- took the input out of the hoverable div but not sure if that will effect how the button is attached -->
+                <input class="input" type="text" placeholder="Search Recipes">
+                <div class="dropdown is-hoverable">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                            <span>Dietary Restrictions</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">
+                                <p>
+                                    <!-- added clickboxes for each button but not exactly sure how necessary that is or how you make them work -->
+                                    <button id = "vegan" class = "button is-small is-primary mt-2">vegan <label class="checkbox"><input class="ml-2 mt-1" type="checkbox"></label></button>
+                                    <button id = "vegetarian" class = "button is-small is-link mt-2">vegetarian <label class="checkbox"><input class="ml-2 mt-1" type="checkbox"></label></button>
+                                    <button id = "gluten-free" class = "button is-small is-info mt-2">gluten-free <label class="checkbox"><input class="ml-2 mt-1" type="checkbox"></label></button>
+                                    <button id = "dairy-free" class = "button is-small is-success mt-2">dairy-free <label class="checkbox"><input class="ml-2 mt-1" type="checkbox"></label></button>
+                                    <button id = "kosher" class = "button is-small is-warning mt-2">kosher <label class="checkbox"><input class="ml-2 mt-1" type="checkbox"></label></button>
+                                    <button id = "low-carb" class = "button is-small is-danger mt-2">low-carb <label class="checkbox"><input class="ml-2 mt-1" type="checkbox"></label></button>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
   </section>
   </body>
   <script src="./Develop/script.js"></script>
