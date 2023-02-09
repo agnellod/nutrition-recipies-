@@ -20,20 +20,28 @@
                         </p>
                 </div>
                 <!-- took the input out of the hoverable div but not sure if that will effect how the button is attached -->
-               
-                <div class="buttonIn">
-                    
-                        <form>
-                            <input type="text" id="input" class="input" placeholder="Search Recipes">
-                            <button id="clear">clear</button>
-                        </form>
+            </div>
+      </div>
+      <div class="columns is-mobile">
+            <div class="column is-half is-offset-5">
+                <div class="field has-addons">
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Search recipes">
+                    </div>
+                    <div class="control">
+                        <a class="button is-info">
+                            Search
+                        </a>
+                    </div>
                 </div>
-                
+            </div>
+      </div>   
+            <div class="column is-half is-offset-one-quarter has-text-centered">
                 <div class="dropdown is-hoverable">
                     <div class="dropdown-trigger">
                         <div class="card mt-2 p-2 aria-has-popup="true" aria-controls="dropdown-menu4">
                             <span>Dietary Restrictions</span>
-                          
+                        
                         </div>
                     </div>
                     <div class="dropdown-menu" id="dropdown-menu4" role="menu">
@@ -49,33 +57,26 @@
                                     <button id = "low-carb" class = "button is-small is-danger mt-2">Low-carb <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                 </p>
                             </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <section class="section is-large">
-            <div class="card is-large">
-                <div class="card-content">
-                    <div class="media">
-                        <figure class="image is-128x128">
-                            <img src="https://bulma.io/images/placeholders/256x256.png">
-                        </figure>
-                        <ul class="ml-3 has-text-dark">
-                            <li id="recipe"></li>
-                            <li id="ingredients"></li>
-                            <li id="time-to-cook"></li>
-                            <li id="serves"></li>
-                          </ul>
+            <section class="section is-large">
+                <div class="card is-large">
+                    <div class="card-content">
+                        <div class="media">
+                            <figure class="image is-128x128">
+                                <img src="https://bulma.io/images/placeholders/256x256.png">
+                            </figure>
+                        </div>
+                        <div class="media-content"></div>
                     </div>
-                    <div class="media-content"></div>
+                
+                    <div class="content"></div>
+                
                 </div>
-                
-                <div class="content"></div>
-                
-            </div>
-        </section>
+            </section>
         
     </section>
   </body>
