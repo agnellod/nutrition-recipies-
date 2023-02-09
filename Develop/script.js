@@ -34,15 +34,7 @@ async function fetchAPI() {
   console.log(data);
 }
 
-function generateHTML(results) {
-  container.classList.remove("initial");
-  let generatedHTML = "";
-  results.map((result) => {
-    generatedHTML += 
-// add what it will generate ie view button for recipe, calories
-  searchResultDiv.innerHTML = generatedHTML;
-}
-)};
+
 
 
 fetch(url, options)
