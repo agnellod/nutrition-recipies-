@@ -34,17 +34,7 @@ async function fetchAPI() {
   console.log(data);
 }
 
-function generateHTML(results) {
-  //actually we dont need this 
-  // should instead have this link to the new html
-  container.classList.remove("initial");
-  let generatedHTML = "";
-  results.map((result) => {
-    generatedHTML += 
-// add what it will generate ie view button for recipe, calories
-  searchResultDiv.innerHTML = generatedHTML;
-}
-)};
+
 
 
 fetch(url, options)
