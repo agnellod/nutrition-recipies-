@@ -35,6 +35,8 @@ async function fetchAPI() {
 }
 
 function generateHTML(results) {
+  //actually we dont need this 
+  // should instead have this link to the new html
   container.classList.remove("initial");
   let generatedHTML = "";
   results.map((result) => {
