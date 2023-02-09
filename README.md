@@ -1,9 +1,10 @@
 # nutrition-recipies-
 
-USER STORY
+# USER STORY
+
 As a busy parent with crazy kids, 
-I want to find quick and easy recipes to fit my dietary needs 
-so that I can maintain sanity, health and peace of mind. 
+I WANT to find quick and easy recipes to fit my dietary needs 
+SO THAT I can maintain sanity, health and peace of mind. 
 
 
 
@@ -17,3 +18,10 @@ WHEN I view other dietary or food options
 THEN I am presented with ten other dietary and/or food recipes
 WHEN I refresh the screen
 THEN previously searched recipes are stored within local storage. 
+
+
+## Mock-Up
+
+The following images show the web application's appearance and functionality:
+
+![The nutritional recipe search app includes options for users to select dietary preferences as well as various food options. Once options are selected, user will be presented with ten recipes that fit within the selected dietary and food selections.]()
