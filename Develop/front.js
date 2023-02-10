@@ -50,7 +50,7 @@ searchButtonEl.addEventListener('click', switchToSecondPage);
 var searchInput = document.getElementById('.input')
  localStorage.setItem('.input', searchInput.value);
   
-var storedSearch = localStorage.getItem('.input');
+var storedSearch = localStorage.getItem('.input'); 
 
 
 
