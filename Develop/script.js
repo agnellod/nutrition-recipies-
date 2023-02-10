@@ -20,6 +20,13 @@ checkboxes.forEach(function(checkbox) {
     console.log(enabledSettings)
   })
 });
+
+
+
+
+
+
+
             // Fetch api for each filter option 
 // Curl for vegan/ curl -X GET --header "Accept: application/json" "https://api.edamam.com/api/recipes/v2?type=public&app_id=id&app_key=apiKey&health=vegan"
 // request url for vegan/ https://api.edamam.com/api/recipes/v2?type=public&app_id=id&app_key=apiKey&health=vegan
