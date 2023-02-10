@@ -67,7 +67,6 @@ randomRecipe();
 function addElement(data) {
     // create a new div element
     const newDiv = document.createElement("div");
-    const secondDiv = document.createElement("div");
     
     // and give it some content
     const newContent = document.createElement("h1");
@@ -118,9 +117,10 @@ function addElement(data) {
     ingredient20.textContent = data.meals[0].strIngredient20;
     const instructions = document.createElement("p");
     instructions.textContent = data.meals[0].strInstructions;
-    instructions.classList.add("has-text-black", "has-text-centered")
-    const source = document.createElement("a")
+    instructions.classList.add("has-text-black", "has-text-centered");
+    const source = document.createElement("a");
     source.textContent = data.meals[0].strSource;
+    source.classList.add("has-text-centered");
     
 
 
@@ -150,8 +150,8 @@ function addElement(data) {
     
     // add the text node to the newly created div
     newDiv.appendChild(newContent);
-    newDiv.appendChild(newImg);
-    newDiv.appendChild(ingredientsList);
+    newDiv.append(newImg);
+    newDiv.append(ingredientsList);
     newDiv.appendChild(instructions);
     newDiv.appendChild(source);
 // add the newly created element and its content into the DOM
