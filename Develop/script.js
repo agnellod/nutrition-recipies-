@@ -20,6 +20,8 @@ checkboxes.forEach(function(checkbox) {
     console.log(enabledSettings)
   })
 });
+
+
             // Fetch api for each filter option 
 // Curl for vegan/ curl -X GET --header "Accept: application/json" "https://api.edamam.com/api/recipes/v2?type=public&app_id=id&app_key=apiKey&health=vegan"
 // request url for vegan/ https://api.edamam.com/api/recipes/v2?type=public&app_id=id&app_key=apiKey&health=vegan
@@ -59,7 +61,7 @@ searchForm.addEventListener("submit", (e) => {
 });
 
 async function fetchAPI() {
-  const searchUrl = `https://api.edamam.com/search?q=chicken&id=${id}&apiKey=${apisKey}`;
+  const searchUrl = `https://api.edamam.com/search?q=chicken&id=${id}&apiKey=${apiKey}`;
   const response = await fetch(searchUrl);
   const data = await response.json();
   generateHTML(data.hits);
