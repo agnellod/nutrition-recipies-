@@ -11,7 +11,26 @@ function switchToSecondPage(event) {
         return;
     }
 
-
+    // document.getElementById('dropdown-item', '.vegan').addEventListener('click', function (check) {
+    //     check.preventDefault();
+    //     let checkedBox = document.querySelector('.checkbox');
+    //     let checkedOutput = checkedBox.append(queryString);
+        
+    //     for (let check of checkedBox) {
+    //         const d = history.healthlabels[5];
+    //         fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=${id}&app_key=${apiKey}&health=vegan`)
+            
+    //         .then((r)=> r.json())
+            
+    //         .then( d => {
+                
+    //             let checkedPreference = document.textContent(check + history.healthlabels[0])
+    //             console.log(checkedPreference); // confirm that these query calls link to our api specifically
+    //             checkedOutput.appendChild(checkedPreference)
+    //         }) 
+    //     }
+            
+    //     })
     const queryString = './secondpage.html?q=' + searchInputVal + '&dietaryrestriction=' + dietaryRestVal;
 
     // location.assign(queryString);
