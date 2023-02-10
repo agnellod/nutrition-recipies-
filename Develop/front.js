@@ -67,11 +67,12 @@ randomRecipe();
 function addElement(data) {
     // create a new div element
     const newDiv = document.createElement("div");
+    const secondDiv = document.createElement("div");
     
     // and give it some content
     const newContent = document.createElement("h1");
     newContent.textContent = data.meals[0].strMeal;
-    newContent.classList.add("has-text-black", "is-size-2", "has-text-centered")
+    newContent.classList.add("has-text-black", "is-size-2", "has-text-centered", "p-2")
     const newImg = document.createElement("img");
     newImg.setAttribute('src', data.meals[0].strMealThumb);
     const ingredientsList = document.createElement("ul");
@@ -120,6 +121,7 @@ function addElement(data) {
     instructions.classList.add("has-text-black", "has-text-centered")
     const source = document.createElement("a")
     source.textContent = data.meals[0].strSource;
+    
 
 
 
