@@ -2,6 +2,9 @@ const searchForm = document.querySelector("form");
 const searchResultDiv = document.querySelector(".search-result");
 const container = document.querySelector(".container");
 let searchQuery = "";
+
+
+
 // Api key and id
 var apiKey = '356844f53ca5f3e2604e67318c228565';
 var id = 'eceea0f0';
