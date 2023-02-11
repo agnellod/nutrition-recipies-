@@ -1,3 +1,36 @@
+/**pseu
+ * create funtion with api and link with the key and id (fetch and .then)
+ * 
+ * 
+ * make some kind of for loop using if and else statments loops through data from api 
+ *  -for loop should only go up to 10
+ * in this function target ids in html for where to populate data
+ * if nothing is selected then populates with unfiltered data
+ * 
+ */
+const apiKey = '356844f53ca5f3e2604e67318c228565';
+const id = 'eceea0f0';
+
+
+var search =document.getElementById("#box-1")
+var url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=vegan`;
+fetch(url)
+.then(function (response) {
+    return response.json()
+})
+.then(function(data){
+    
+        console.log(data)
+        
+    })
+
+
+
+
+
+
+
+
 const searchButtonEl = document.querySelector('.is-info');
 
 function switchToSecondPage(event) {
@@ -19,54 +52,6 @@ function switchToSecondPage(event) {
 
 searchButtonEl.addEventListener('click', switchToSecondPage);
 
-const APP_Key = '356844f53ca5f3e2604e67318c228565';
-const id = 'eceea0f0';
-
-
-
-var url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=${id}&app_key=${APP_Key}`;
-
-var random = document.getElementById("display-recipes");
-var randomRecipe = function(){
-
-    fetch(url)
-    .then(function (response) {
-        return response.json()
-    })
-    .then(function(data){
-        document.body.onload = addElement;
-        addElement(data);
-            console.log(data)
-            
-        })
-      }
-// document.getElementById('dropdown-item', '.vegan').addEventListener('click', function (check) {
-//     check.preventDefault();
-//     let checkedBox = document.querySelector('.checkbox');
-//     let checkedOutput = checkedBox.append(queryString);
-    
-//     for (let check of checkedBox) {
-//         const d = history.healthlabels[5];
-//         fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=${id}&app_key=${apiKey}&health=vegan`)
-        
-//         .then((r)=> r.json())
-        
-//         .then( d => {
-            
-//             let checkedPreference = document.textContent(check + history.healthlabels[0])
-//             console.log(checkedPreference); // confirm that these query calls link to our api specifically
-//             checkedOutput.appendChild(checkedPreference)
-//         }) 
-//     }
-        
-//     })
-
-
-
-
-
-var random = document.getElementById("display-recipe");
-const apiKey = '1'
 var randomRecipe = function(){
     var frontApi = 'https://www.themealdb.com/api/json/v1/1/random.php';
     fetch(frontApi)
