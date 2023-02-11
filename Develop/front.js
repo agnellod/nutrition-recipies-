@@ -19,7 +19,27 @@ function switchToSecondPage(event) {
 
 searchButtonEl.addEventListener('click', switchToSecondPage);
 
+const APP_Key = '356844f53ca5f3e2604e67318c228565';
+const id = 'eceea0f0';
 
+
+
+var url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=${id}&app_key=${APP_Key}`;
+
+var random = document.getElementById("display-recipes");
+var randomRecipe = function(){
+
+    fetch(url)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function(data){
+        document.body.onload = addElement;
+        addElement(data);
+            console.log(data)
+            
+        })
+      }
 // document.getElementById('dropdown-item', '.vegan').addEventListener('click', function (check) {
 //     check.preventDefault();
 //     let checkedBox = document.querySelector('.checkbox');
