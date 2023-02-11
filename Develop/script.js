@@ -1,13 +1,10 @@
-const searchForm = document.querySelector("form");
-const searchResultDiv = document.querySelector(".search-result");
-const container = document.querySelector(".container");
-let searchQuery = "";
+const apiKey = '356844f53ca5f3e2604e67318c228565';
+const id = 'eceea0f0';
 
-// Api key and id
-var apiKey = '356844f53ca5f3e2604e67318c228565';
-var id = 'eceea0f0';
+
+var 
 var url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=${id}&app_key=${apiKey}`;
-const options = {method: 'GET'};
+
   
 
 
@@ -48,29 +45,6 @@ const options = {method: 'GET'};
 // Curl request for vegan and break/ curl -X GET --header "Accept: application/json" "https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=vegan&mealType=Breakfast"
 // request url for vegan and break/ 
 // console.log(container)
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  searchQuery = e.target.querySelector("input").value;
-  fetchAPI();
-});
 
-async function fetchAPI() {
-  const searchUrl = `https://api.edamam.com/search?q=chicken&id=${id}&apiKey=${apiKey}`;
-  const response = await fetch(searchUrl);
-  const data = await response.json();
-  generateHTML(data.hits);
-  console.log(data);
-}
-
-
-
-
-fetch(url, options)
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
-
-  var checkboxes = document.querySelectorAll("input[type=checkbox][name=settings]");
-  let enabledSettings = []
  
 
