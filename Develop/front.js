@@ -8,24 +8,6 @@
  * if nothing is selected then populates with unfiltered data
  * 
  */
-const apiKey = '356844f53ca5f3e2604e67318c228565';
-const id = 'eceea0f0';
-
-
-var search =document.getElementById("#box-1")
-var url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=vegan`;
-fetch(url)
-.then(function (response) {
-    return response.json()
-})
-.then(function(data){
-    
-        console.log(data)
-        
-    })
-
-
-
 
 
 
@@ -39,6 +21,11 @@ function switchToSecondPage(event) {
     const searchInputVal = document.querySelector('.input').value;
     const dietaryRestVal = document.querySelector('.dropdown-item').value;
 
+    // const apiKey = '356844f53ca5f3e2604e67318c228565';
+    // const id = 'eceea0f0';
+    // var search =document.getElementById("#box-1")
+
+
     if (!searchInputVal) {
         console.error('Please enter food to search');
         return;
@@ -51,6 +38,11 @@ function switchToSecondPage(event) {
 }
 
 searchButtonEl.addEventListener('click', switchToSecondPage);
+
+
+
+
+
 
 var randomRecipe = function(){
     var frontApi = 'https://www.themealdb.com/api/json/v1/1/random.php';
@@ -163,6 +155,47 @@ function addElement(data) {
         currentDiv.appendChild(newDiv);
             }
 
+
+
+
+
+
+
+
+// BELOW IS TRYING TO RUN A FOR LOOP THROUGH THE CHECKBOXES AFTER EVENT LISTENER IS APPLIED TO EACH CHECKBOX AND THEN RUNNING THROUGH FUNCTION TO APPLY API 
+var checkedBox = document.querySelector('.checkbox');;
+checkedBox.addEventListener('click', function (check) {
+    check.preventDefault();
+    
+    for (let i = 0; i < checkedBox.length; i++) {
+        console.log([i]);
+        };
+    });
+
+
+function recipeApiFunc(check) {
+
+
+const dietOptions = {method: 'GET'};
+
+// const recipeApi = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=vegan`;
+// const recipeApiSelec = recipeApi.hits;
+
+fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=vegan`, dietOptions)
+.then(function (response) {
+    return response.json()
+})
+.then(function(data){
+    console.log("diet options fetch", data); 
+    // recipeApiSelec.append(dietaryRestVal);      
+})
+
+var checkedPreference = check + dietOptions;
+              console.log(checkedPreference);
+              checkedBox.appendChild(checkedPreference)
+
+}
+recipeApiFunc();            
 
 
             //LOCAL STORAGE FOR FAVORITES 
