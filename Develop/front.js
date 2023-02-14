@@ -19,7 +19,10 @@ function switchToSecondPage(event) {
     event.preventDefault();
     
     const searchInputVal = document.querySelector('.input').value;
-    const dietaryRestVal = document.querySelector('.dropdown-item').value;
+    const dietaryRestVal = document.querySelectorAll('.checkbox');
+   dietaryRestVal.forEach(element => {
+    console.log(element);
+   });
 
     // const apiKey = '356844f53ca5f3e2604e67318c228565';
     // const id = 'eceea0f0';
@@ -31,7 +34,7 @@ function switchToSecondPage(event) {
         return;
     }
 
-    const queryString = './secondpage.html?q=' + searchInputVal + '&dietaryrestriction=' + dietaryRestVal;
+    const queryString = './secondpage.html?q=' + searchInputVal + '&health=' + dietaryRestVal;
     
     // location.assign(queryString);
     location.assign(queryString)
@@ -163,25 +166,25 @@ function addElement(data) {
 
 
 // BELOW IS TRYING TO RUN A FOR LOOP THROUGH THE CHECKBOXES AFTER EVENT LISTENER IS APPLIED TO EACH CHECKBOX AND THEN RUNNING THROUGH FUNCTION TO APPLY API 
-var checkedBox = document.querySelector('.checkbox');;
-checkedBox.addEventListener('click', function (check) {
-    check.preventDefault();
+var checkedBox = document.getElementById('#checkbox');
+    
+
+
+
+function recipeApiFunc(check) {
     
     for (let i = 0; i < checkedBox.length; i++) {
         console.log([i]);
         };
-    });
-
-
-function recipeApiFunc(check) {
-
 
 const dietOptions = {method: 'GET'};
 
 // const recipeApi = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=vegan`;
 // const recipeApiSelec = recipeApi.hits;
 
-fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=vegan`, dietOptions)
+var Url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=dairy-free`
+
+fetch(Url, dietOptions)
 .then(function (response) {
     return response.json()
 })
@@ -192,10 +195,11 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key
 
 var checkedPreference = check + dietOptions;
               console.log(checkedPreference);
-              checkedBox.appendChild(checkedPreference)
+            //   checkedBox.append(checkedPreference)
 
 }
-recipeApiFunc();            
+
+checkedBox.addEventListener('click', recipeApiFunc());            
 
 
             //LOCAL STORAGE FOR FAVORITES 
