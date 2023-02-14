@@ -192,7 +192,7 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key
 
 const checkedPreference = check + dietOptions;
               console.log(checkedPreference);
-              checkedBox.append(checkedPreference)
+              //checkedBox.append(checkedPreference)
 
 }
 recipeApiFunc();            
