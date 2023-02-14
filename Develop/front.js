@@ -163,7 +163,7 @@ function addElement(data) {
 
 
 // BELOW IS TRYING TO RUN A FOR LOOP THROUGH THE CHECKBOXES AFTER EVENT LISTENER IS APPLIED TO EACH CHECKBOX AND THEN RUNNING THROUGH FUNCTION TO APPLY API 
-var checkedBox = document.querySelector('.checkbox');;
+const checkedBox = document.querySelector('.checkbox');;
 checkedBox.addEventListener('click', function (check) {
     check.preventDefault();
     
@@ -190,9 +190,9 @@ fetch(`https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key
     // recipeApiSelec.append(dietaryRestVal);      
 })
 
-var checkedPreference = check + dietOptions;
+const checkedPreference = check + dietOptions;
               console.log(checkedPreference);
-              checkedBox.appendChild(checkedPreference)
+              checkedBox.append(checkedPreference)
 
 }
 recipeApiFunc();            
