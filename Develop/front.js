@@ -167,6 +167,7 @@ function addElement(data) {
 
 // BELOW IS TRYING TO RUN A FOR LOOP THROUGH THE CHECKBOXES AFTER EVENT LISTENER IS APPLIED TO EACH CHECKBOX AND THEN RUNNING THROUGH FUNCTION TO APPLY API 
 var checkedBox = document.getElementById('#checkbox');
+
     
 
 
@@ -198,6 +199,13 @@ const checkedPreference = check + dietOptions;
               checkedBox.appendChild(checkedPreference)
 
 }
+ 
+document.getElementById('btn').onclick = function() {  
+  var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');  
+  for (var checkbox of markedCheckbox) {  
+    document.body.append(checkbox.value + ' ');  
+  }  
+}  
 
 checkedBox.addEventListener('click', recipeApiFunc());            
 
