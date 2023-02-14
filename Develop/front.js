@@ -187,17 +187,23 @@ var Url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app
 
 fetch(Url, dietOptions)
 .then(function (response) {
+
     return response.json()
 })
 .then(function(data){
-    console.log("diet options fetch", data); 
+   
+    console.log(data);
+            
+    
     // recipeApiSelec.append(dietaryRestVal);      
 })
+
 
 const checkedPreference = check + dietOptions;
               console.log(checkedPreference);
               checkedBox.appendChild(checkedPreference)
 
+            checkedBox.addEventListener('click', recipeApiFunc());            
 }
  
 document.getElementById('btn').onclick = function() {  
@@ -207,7 +213,6 @@ document.getElementById('btn').onclick = function() {
   }  
 }  
 
-checkedBox.addEventListener('click', recipeApiFunc());            
 
 
             //LOCAL STORAGE FOR FAVORITES 
