@@ -186,20 +186,25 @@ var Url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app
 
 fetch(Url, dietOptions)
 .then(function (response) {
+
     return response.json()
 })
 .then(function(data){
-    console.log("diet options fetch", data); 
+   
+    console.log(data);
+            
+    
     // recipeApiSelec.append(dietaryRestVal);      
 })
+
 
 var checkedPreference = check + dietOptions;
               console.log(checkedPreference);
             //   checkedBox.append(checkedPreference)
 
+            checkedBox.addEventListener('click', recipeApiFunc());            
 }
 
-checkedBox.addEventListener('click', recipeApiFunc());            
 
 
             //LOCAL STORAGE FOR FAVORITES 

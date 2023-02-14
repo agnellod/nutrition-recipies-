@@ -18,6 +18,16 @@ fetch(url)
     return response.json()
 })
 .then(function(data){
+    const box1 = document.createElement("div");
+    
+    const titleEl = document.createElement("h1")
+    titleEl.textContent = data.hits[0].recipe.label;
+    box1.appendChild(titleEl);    
+
+
+    console.log("diet options fetch", data);
+    const recipeDiv = document.getElementById("box");
+        recipeDiv.appendChild(box1);
     
         console.log(data)
         
