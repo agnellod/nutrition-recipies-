@@ -15,7 +15,6 @@ var url = `https://api.edamam.com/api/recipes/v2?type=public&q=${urlSplitq}&app_
 
 
 for (let i = 0; i < data.hits.length; i++) {
-    console.log(i)
     console.log(data.hits[i].recipe.ingredientLines[1]);
  
 
