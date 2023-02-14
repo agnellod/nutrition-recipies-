@@ -118,9 +118,9 @@ fetch(url)
     ingredient20.textContent = data.hits[0].recipe.ingredientLines[19];
     ulEl.appendChild(ingredient20);
 
-    const instrustions = document.createElement("a");
-    instrustions.textContent = data.hits[0].recipe.url;
-    box1.appendChild(instrustions);
+    const instructions = document.createElement("a");
+    instructions.textContent = data.hits[0].recipe.url;
+    box1.appendChild(instructions);
 
 
 
