@@ -56,6 +56,7 @@ searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   searchQuery = e.target.querySelector("input").value;
   fetchAPI();
+  localStorage.setItem ("searchForm", "submit");
 });
 
 async function fetchAPI() {
