@@ -1,18 +1,3 @@
-/**pseu
- * create funtion with api and link with the key and id (fetch and .then)
- * 
- * 
- * make some kind of for loop using if and else statments loops through data from api 
- *  -for loop should only go up to 10
- * in this function target ids in html for where to populate data
- * if nothing is selected then populates with unfiltered data
- * 
- */
-
-
-
-
-
 const searchButtonEl = document.querySelector('.is-info');
 
 function switchToSecondPage(event) {
@@ -182,7 +167,7 @@ const dietOptions = {method: 'GET'};
 // const recipeApi = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=vegan`;
 // const recipeApiSelec = recipeApi.hits;
 
-var Url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565&health=dairy-free`
+var Url = `https://api.edamam.com/api/recipes/v2?type=public&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565`
 
 fetch(Url, dietOptions)
 .then(function (response) {
