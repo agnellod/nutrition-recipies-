@@ -104,6 +104,7 @@ function addElement(data) {
     instructions.classList.add("has-text-black", "has-text-centered");
     const source = document.createElement("a");
     source.textContent = data.meals[0].strSource;
+    source.href = data.meals[0].strSource;
     
 
 
