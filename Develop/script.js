@@ -78,7 +78,6 @@ var randomRecipe = function(){
             
         })
       }
-    }
 
 
 searchForm.addEventListener("submit", (e) => {
