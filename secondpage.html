@@ -1,241 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recipe Finder</title>
-    <link rel="stylesheet" href="./Develop/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
-  <body>
-    <section class="section">
-      <div class="column is-half is-offset-one-quarter has-text-centered">
-        <div class="container">
-            <h1 class="title">
-              Your Meals Your Way
-            </h1>
-            <p class="subtitle">
-              Some recipes that you may enjoy! 
-            </p>
-        </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="./Develop/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="column is-half is-offset-one-quarter has-text-centered">
+      <div class="container">
+        <h1 class="title">
+          Your Meals Your Way
+        </h1>
+        <p class="subtitle">
+          Some recipes that you may enjoy!
+        </p>
       </div>
-      <!-- added buttons for different meal times made them different colors-->
-      <div class="columns ">
-        <div class="column is-half is-offset-one-quarter has-text-centered">
-          <button id="breakfast" class="button is-success">Breakfast</button>
-          <button id="lunch" class="button is-warning">Lunch</button>
-          <button id="dinner" class="button is-link">Dinner</button>
-          <button id="snacks" class="button is-danger">Snacks</button>
-        </div>
-       </div>
-       <!-- added a content div for the recipes to be displayed in
+    </div>
+    <!-- added a content div for the recipes to be displayed in
       not sure about using ordered list would be helpful to append each result to but can always take out 
     Could also put multiple cards into content div to be able to target each card with info from api results-->
-    <div id="box-1" class="card m-2">
-      <div class="card-content">
-          <div class="media">
-            <figure class="image is-128x128">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-            </figure>
-          <ul class="ml-3 has-text-dark">
-              <li id="recipe"></li>
-              <li id="ingredients"></li>
-              <li id="time-to-cook"></li>
-              <li id="serves"></li>
-            </ul>
-          </div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
+    <div id="card-container" class="card">
       
-    </div>
-
-    <div id="box-2" class="card m-2">
-      <div class="card-content">
-          <div class="media">
-            <figure class="image is-128x128">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-            </figure>
-          <ul class="ml-3 has-text-dark">
-              <li id="recipe"></li>
-              <li id="ingredients"></li>
-              <li id="time-to-cook"></li>
-              <li id="serves"></li>
-            </ul>
-          </div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
-      
-    </div>
-
-    <div id="box-3" class="card m-2">
-      <div class="card-content">
-          <div class="media">
-            <figure class="image is-128x128">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-            </figure>
-          <ul class="ml-3 has-text-dark">
-              <li id="recipe"></li>
-              <li id="ingredients"></li>
-              <li id="time-to-cook"></li>
-              <li id="serves"></li>
-            </ul>
-          </div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
-      
-    </div>
-
-    <div id="box-4" class="card m-2">
-      <div class="card-content">
-          <div class="media">
-            <figure class="image is-128x128">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-            </figure>
-          <ul class="ml-3 has-text-dark">
-              <li id="recipe"></li>
-              <li id="ingredients"></li>
-              <li id="time-to-cook"></li>
-              <li id="serves"></li>
-            </ul>
-          </div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
-      
-    </div>
-
-    <div id="box-5" class="card m-2">
-      <div class="card-content">
-          <div class="media">
+      <div id="box" class="card has-text-centered m-2">
+        <!-- <div class="card-content">
+          <div class="recipe-title">
             <figure class="image is-128x128">
               <img src="https://bulma.io/images/placeholders/256x256.png">
             </figure>
             <ul class="ml-3 has-text-dark">
               <li id="recipe"></li>
               <li id="ingredients"></li>
-              <li id="time-to-cook"></li>
-              <li id="serves"></li>
             </ul>
           </div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
-      
-    </div>
+          
+        </div> -->
 
-    <div id="box-6" class="card m-2">
-      <div class="card-content">
-          <div class="media">
-            <figure class="image is-128x128">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-            </figure>
-          <ul class="ml-3 has-text-dark">
-              <li id="recipe"></li>
-              <li id="ingredients"></li>
-              <li id="time-to-cook"></li>
-              <li id="serves"></li>
-            </ul>
-          </div>
-            <div class="media-content"></div>
       </div>
-    
-          <div class="content"></div>
-      
-    </div>
 
-    <div id="box-7" class="card m-2">
-      <div class="card-content">
-          <div class="media">
-            <figure class="image is-128x128">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-            </figure>
-          <ul class="ml-3 has-text-dark">
-              <li id="recipe"></li>
-              <li id="ingredients"></li>
-              <li id="time-to-cook"></li>
-              <li id="serves"></li>
-            </ul>
-          </div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
-      
     </div>
+  </section>
+</body>
+<script src="./Develop/script.js"></script>
 
-    <div id="box-8" class="card m-2">
-      <div class="card-content">
-          <div class="media">
-            <figure class="image is-128x128">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-            </figure>
-          <ul class="ml-3 has-text-dark">
-              <li id="recipe"></li>
-              <li id="ingredients"></li>
-              <li id="time-to-cook"></li>
-              <li id="serves"></li>
-            </ul>
-          </div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
-      
-    </div>
-
-    <div id="box-9" class="card m-2">
-      <div class="card-content">
-        <div class="media">
-          <figure class="image is-128x128">
-            <img src="https://bulma.io/images/placeholders/256x256.png">
-          </figure>
-          <ul class="ml-3 has-text-dark">
-            <li id="recipe"></li>
-            <li id="ingredients"></li>
-            <li id="time-to-cook"></li>
-            <li id="serves"></li>
-          </ul>
-        </div>
-        <div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
-      
-    </div>
-    </div>
-
-
-    <div id="box-10" class="card m-2">
-      <div class="card-content">
-          <div class="media">
-              <figure class="image is-128x128">
-                <img src="https://bulma.io/images/placeholders/256x256.png">
-              </figure>
-              <ul class="ml-3 has-text-dark">
-                <li id="recipe"></li>
-                <li id="ingredients"></li>
-                <li id="time-to-cook"></li>
-                <li id="serves"></li>
-              </ul>
-          </div>
-            <div class="media-content"></div>
-      </div>
-    
-          <div class="content"></div>
-      
-    </div>
-  
-       
-    </section>
-  </body>
-  <script src="./Develop/script.js"></script>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recipe Finder</title>
-    <link rel="stylesheet" href="./Develop/style.css">
+    <link rel="stylesheet" href="Develop/front.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
@@ -12,7 +12,7 @@
       <div class="columns is-mobile">
           <div class="column is-half is-offset-one-quarter has-text-centered">
                 <div class="container initial">
-                        <h1 class="title">
+                        <h1 class="title has-text-centered">
                             Your Meals Your Way
                         </h1>
                         <p class="subtitle">
@@ -47,14 +47,13 @@
                     <div class="dropdown-menu" id="dropdown-menu4" role="menu">
                         <div class="dropdown-content">
                             <div class="dropdown-item">
-                                <p>
+                                <p id="checkbox">
                                     <!-- added clickboxes for each button but not exactly sure how necessary that is or how you make them work -->
-                                    <button id = "vegan" class = "button is-small is-primary mt-2">Vegan <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
+                                    <button class = "button is-small is-primary mt-2">Vegan <label class="checkbox"><input id = "vegan" class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                     <button id = "vegetarian" class = "button is-small is-link mt-2">Vegetarian <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                     <button id = "gluten-free" class = "button is-small is-info mt-2">Gluten-free <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                     <button id = "dairy-free" class = "button is-small is-success mt-2">Dairy-free <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                     <button id = "kosher" class = "button is-small is-warning mt-2">Kosher <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
-                                    <button id = "low-carb" class = "button is-small is-danger mt-2">Low-carb <label class="checkbox"><input class="ml-2 mt-1" type="checkbox" name="settings"></label></button>
                                 </p>
                             </div>
                             
@@ -62,19 +61,10 @@
                     </div>
                 </div>
             </div>
-            <section class="section is-large">
-                <div class="card is-large">
-                    <div class="card-content" id="display-recipe"></div>>
-                        <div class="media">
-                            <figure class="image is-128x128">
-                                <img src="https://bulma.io/images/placeholders/256x256.png">
-                            </figure>
-                        </div>
-                        <div class="media-content"></div>
-                    </div>
-                
-                    <div class="content"></div>
-                
+            <section class="section">
+                <div class="content">
+                    <div class="card p-2 mt-2" id="display-recipe"></div>
+
                 </div>
             </section>
         
@@ -82,8 +72,3 @@
   </body>
   <script src="./Develop/front.js"></script>
 </html>
-
-<!--<div>  <h1>Random Recipe Generator</h1>
-<h2>Brought to you by TheMealDB</h2></div>
-<br>
-    <div id="display"></div> -->
