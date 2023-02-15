@@ -135,8 +135,7 @@ fetch(url)
     })
 
 
-  
-var random = document.getElementById("display-recipes");
+  var random = document.getElementById("display-recipes");
 var randomRecipe = function(){
 
     fetch(url)
@@ -151,3 +150,31 @@ var randomRecipe = function(){
         })
       }
     }
+
+
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  searchQuery = e.target.querySelector("input").value;
+  fetchAPI();
+  localStorage.setItem ("searchForm", "submit");
+});
+
+async function fetchAPI() {
+  const searchUrl = `https://api.edamam.com/search?q=chicken&id=${id}&apiKey=${apisKey}`;
+  const response = await fetch(searchUrl);
+  const data = await response.json();
+  generateHTML(data.hits);
+  console.log(data);
+}
+
+
+
+
+fetch(url, options)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+
+ 
+
