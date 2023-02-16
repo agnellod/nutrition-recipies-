@@ -13,6 +13,8 @@ healthStr && `&health=${urlSplitHealth}`;
 var search =document.getElementById("#box-1");
 var url = `https://api.edamam.com/api/recipes/v2?type=public&q=${urlSplitq}&app_id=eceea0f0&app_key=356844f53ca5f3e2604e67318c228565${healthStr}`;
 
+
+
 fetch(url)
 .then(function (response) {
     return response.json()
