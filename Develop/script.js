@@ -64,7 +64,7 @@ fetch(url)
     })
 
 
-  var random = document.getElementById("display-recipes");
+var random = document.getElementById("display-recipes");
 var randomRecipe = function(){
 
     fetch(url)
@@ -78,6 +78,7 @@ var randomRecipe = function(){
             
         })
       }
+    
 
 
 searchForm.addEventListener("submit", (e) => {
